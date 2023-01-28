@@ -4,8 +4,8 @@ Use https://quickchart.io/
 Build a bar graph to display 5 fields inputted by the user and display the output in browser.
 """
 
-import webbrowser
 import json
+import webbrowser
 from urllib.parse import urlencode
 
 BASE_URL = 'https://quickchart.io/chart?%s'
