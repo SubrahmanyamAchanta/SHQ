@@ -3,7 +3,7 @@ Task 11
 Use https://api.nasa.gov/ Insight( https://mars.nasa.gov/insight/weather/)
 Display the current weather on Mars in browser.
 
-The API given in the question is giving weather information currently. Still, I completed this task with the
+The API given in the question is not giving weather information currently. Still, I completed this task with the
 available information to show that I can parse json and display it on graphs.
 """
 
