@@ -6,9 +6,12 @@ The function should return the index of element to be searched in the list.
 
 
 def binary_search(search_list, key):
-    """Binary Search using iterative approach as it requires no extra memory space compared to recursive approach will take
+    """
+    Binary Search using iterative approach as it requires no extra memory space compared to recursive approach will take
     Auxiliary space of O(log n) for storing function call stack. Time complexity for both recursive and iterative
-    approach is O(log n). """
+    approach is O(log n).
+    """
+
     left = 0
     right = len(search_list) - 1
 

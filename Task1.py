@@ -20,7 +20,7 @@ def list_slicer(input_list):
 
 
 def main():
-    """Used functions as it was mentioned in question"""
+    """Wrote code in functions as asked in question"""
     input_list = [5, 10, 15, 20, 25]
     sliced_list = list_slicer(input_list)
     print(sliced_list)

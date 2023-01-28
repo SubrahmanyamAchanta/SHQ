@@ -15,8 +15,10 @@ import random
 
 
 def common_elements(a, b):
-    """converting lists into sets and finding intersection. Sets will be easier to operate on, when elements order and
-    duplicates need not be preserved"""
+    """
+    converting lists into sets and finding intersection. Sets will be easier to operate on, when elements order and
+    duplicates need not be preserved
+    """
     return list(set(a).intersection(b))
 
 
