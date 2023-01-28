@@ -39,17 +39,20 @@ def main():
     player2_name = input("Enter Name of Player 2 : ")
     try:
         user_input = int(input("Do you want to play? Enter 1 to Start Game, 2 to End Game "))
-        while user_input == 1:
-            print(get_options())
-            player1_input = int(input(f"PLease enter {player1_name}'s option "))
-            player2_input = int(input(f"PLease enter {player2_name}'s option"))
-            winner = get_winner(player1_input, player2_input)
-            if winner == 1:
-                print(f"{player1_name} Won")
-            elif winner == 2:
-                print(f"{player2_name} Won")
+        while user_input != 2:
+            if user_input == 1:
+                print(get_options())
+                player1_input = int(input(f"PLease enter {player1_name}'s option "))
+                player2_input = int(input(f"PLease enter {player2_name}'s option"))
+                winner = get_winner(player1_input, player2_input)
+                if winner == 1:
+                    print(f"{player1_name} Won")
+                elif winner == 2:
+                    print(f"{player2_name} Won")
+                else:
+                    print("Game is Draw")
             else:
-                print("Game is Draw")
+                print("Invalid CHoice")
             user_input = int(input("Do you want to play? Enter 1 to Start Game, 2 to End Game "))
     # Catching valueError to handle invalid user inputs which crashes program due to failure of type casting to integer
     except ValueError:
