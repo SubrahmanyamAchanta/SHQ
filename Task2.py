@@ -11,7 +11,7 @@ shown back to me.
 
 def str_word_rev(input_str):
     """Split a long sentence into a list of words and reverse the list"""
-    str_split = str.split(" ")
+    str_split = input_str.split(" ")
     str_split.reverse()
     return str_split
 
@@ -21,4 +21,5 @@ def main():
     print(f'Output string: {" ".join(str_word_rev(input_str))}')
 
 
-main()
+if __name__ == "__main__":
+    main()

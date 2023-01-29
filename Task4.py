@@ -60,4 +60,5 @@ def main():
     print("Game Over")
 
 
-main()
+if __name__ == "__main__":
+    main()

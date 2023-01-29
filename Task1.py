@@ -26,4 +26,5 @@ def main():
     print(sliced_list)
 
 
-main()
+if __name__ == "__main__":
+    main()

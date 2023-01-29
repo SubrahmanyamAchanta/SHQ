@@ -3,8 +3,8 @@ Task 11
 Use https://api.nasa.gov/ Insight( https://mars.nasa.gov/insight/weather/)
 Display the current weather on Mars in browser.
 
-The API given in the question is not giving weather information currently. Still, I completed this task with the
-available information to show that I can parse json and display it on graphs.
+The API given in the question is not giving correct weather information currently. Still, I completed this task with the
+available information to show that I know how to parse json and display it on graphs.
 """
 
 import json
@@ -49,4 +49,5 @@ params = {
 
 url = BASE_URL % urlencode(params)
 webbrowser.open(url, new=1)
+# another URL available on NASA website which provides weather information as a picture.
 webbrowser.open(IMG_URL)

@@ -34,7 +34,7 @@ def main():
         print(title)
 
 
-# checking if file run as script as this file is imported in next task Task6 Otherwise it will run main function and
+# checking if file run as script as this file is imported in next task Task6. Otherwise it will run main function and
 # print output during import process in Task6.
 if __name__ == "__main__":
     main()

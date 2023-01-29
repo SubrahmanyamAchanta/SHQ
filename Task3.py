@@ -31,4 +31,5 @@ def main():
     print(common_elements(a, b))
 
 
-main()
+if __name__ == "__main__":
+    main()

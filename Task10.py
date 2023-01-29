@@ -8,7 +8,7 @@ import gzip
 
 input_str = b'Music industry hails passage of the Music Modernization Act'
 file_name = "file.txt.gz"
-# Creates a compressed gz file with a text file containing input string.
+# Creates a compressed .gz file with a text file containing input string.
 with gzip.open(file_name, "wb") as fp:
     fp.write(input_str)
 

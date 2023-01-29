@@ -55,4 +55,5 @@ def main():
         print("Please enter a integer number")
 
 
-main()
+if __name__ == "__main__":
+    main()
