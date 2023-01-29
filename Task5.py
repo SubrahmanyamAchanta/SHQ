@@ -8,17 +8,19 @@ from bs4 import BeautifulSoup
 
 
 def get_html(url_link):
-    """pass headers also in get request by creating a dictionary"""
-    response = requests.get(url_link)
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
+                      'Chrome/102.0.0.0 Safari/537.36'}
+    response = requests.get(url_link, headers=headers)
     if response.status_code == 200:
         return response.text
 
 
 def get_titles(url_link):
     """
-    checked the source code of webpage and observed required titles are in a span with css class name titleline.
+    checked the source code of webpage and observed required titles are in a <span> with css class name titleline.
     Used findall to get all the spans elements with titleline class name. used gettext to get
-    string from those elements
+    string from those elements.
     """
     html_content = get_html(url_link)
     soup = BeautifulSoup(html_content, 'html.parser')
