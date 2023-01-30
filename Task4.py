@@ -38,12 +38,24 @@ def main():
     player1_name = input("Enter Name of Player 1 : ")
     player2_name = input("Enter Name of Player 2 : ")
     try:
-        user_input = int(input("Do you want to play? Enter 1 to Start Game, 2 to End Game "))
+        user_input = input("Do you want to play? Enter 1 to Start Game, 2 to End Game ")
+        while user_input not in ['1', '2']:
+            print("Invalid Option")
+            user_input = input("Do you want to play? Enter 1 to Start Game, 2 to End Game ")
+        user_input = int(user_input)
         while user_input != 2:
             if user_input == 1:
                 print(get_options())
-                player1_input = int(input(f"PLease enter {player1_name}'s option "))
-                player2_input = int(input(f"PLease enter {player2_name}'s option"))
+                player1_input = input(f"PLease enter {player1_name}'s option ")
+                while player1_input not in ['1', '2', '3']:
+                    print("Invalid Option")
+                    player1_input = input(f"PLease enter {player1_name}'s option ")
+                player2_input = input(f"PLease enter {player2_name}'s option")
+                while player2_input not in ['1', '2', '3']:
+                    print("Invalid Option")
+                    player2_input = input(f"PLease enter {player2_name}'s option ")
+                player1_input = int(player1_input)
+                player2_input = int(player2_input)
                 winner = get_winner(player1_input, player2_input)
                 if winner == 1:
                     print(f"{player1_name} Won")
@@ -53,7 +65,11 @@ def main():
                     print("Game is Draw")
             else:
                 print("Invalid CHoice")
-            user_input = int(input("Do you want to play? Enter 1 to Start Game, 2 to End Game "))
+            user_input = input("Do you want to play? Enter 1 to Start Game, 2 to End Game ")
+            while user_input not in ['1', '2']:
+                print("Invalid Option")
+                user_input = input("Do you want to play? Enter 1 to Start Game, 2 to End Game ")
+            user_input = int(user_input)
     # Catching valueError to handle invalid user inputs which crashes program due to failure of type casting to integer
     except ValueError:
         print("Invalid Input")
