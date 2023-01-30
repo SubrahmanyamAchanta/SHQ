@@ -10,5 +10,5 @@ url_link = "https://news.ycombinator.com/"
 file_name = input("Enter a filename")
 file_content = get_titles(url_link)
 
-with open(file_name, 'w') as fp:
+with open(f"{file_name}.txt", 'w') as fp:
     fp.write("\n".join(file_content))
